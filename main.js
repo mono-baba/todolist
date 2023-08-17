@@ -1,6 +1,7 @@
 window.onload = function () {
   createList();
   setProgressBar();
+  linkCheckBox();
 }
 
 // ボタンをクリックしたら入力内容をリストに追加する
@@ -85,4 +86,25 @@ function setProgressBar() {
       }
     });
   });
+}
+
+// チェックボックスと連動する
+function linkCheckBox() {
+  const checks = document.querySelectorAll('.todo-checkbox');
+  checks.forEach(check => {
+    check.addEventListener('change', () => {
+      const fixButton = check.parentElement.querySelector('[data-gauge="fix"]');
+      const harfButton = check.parentElement.querySelector('[data-gauge="harf"]');
+      const littleButton = check.parentElement.querySelector('[data-gauge="little"]');
+      if (fixButton.classList.contains('active')) {
+        fixButton.classList.remove('active');
+        harfButton.classList.remove('active');
+        littleButton.classList.remove('active');
+      } else {
+        fixButton.classList.add('active');
+        harfButton.classList.add('active');
+        littleButton.classList.add('active');
+      }
+    })
+  })
 }
