@@ -6,11 +6,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>to do list</title>
+  <script src="/main.js"></script>
+  <link rel="stylesheet" media="all" href="/style.css" />
 </head>
 
 
 <body>
   <h1>やることリスト</h1>
+  <form action="">
+    <input type="text" name="todo" id="input-text" />
+    <button type="button" id="add-button">登録</button>
+  </form>
+  <div>
+    <ul class="todo-list" id="toDo">
+      <li class="todo-list-item">
+        <input type="checkbox" id="toDo01" class="todo-checkbox" name="toDo01" />
+        <label for="toDo01" class="todo-label">やること１</label>
+        <div class="gauge"><button type="button" data-gauge="little">少しできた</button><button type="button" data-gauge="harf">半分</button><button type="button" data-gauge="fix">完了</button></div>
+      </li>
+      <li class="todo-list-item">
+        <input type="checkbox" id="toDo02" class="todo-checkbox" name="toDo02" />
+        <label for="toDo02" class="todo-label">やること２</label>
+        <div class="gauge"><button type="button" data-gauge="little">少しできた</button><button type="button" data-gauge="harf">半分</button><button type="button" data-gauge="fix">完了</button></div>
+      </li>
+      <li class="todo-list-item">
+        <input type="checkbox" id="toDo03" class="todo-checkbox" name="toDo03" />
+        <label for="toDo03" class="todo-label">やること３</label>
+        <div class="gauge"><button type="button" data-gauge="little">少しできた</button><button type="button" data-gauge="harf">半分</button><button type="button" data-gauge="fix">完了</button></div>
+      </li>
+    </ul>
+  </div>
 </body>
 
 
